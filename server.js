@@ -10,7 +10,7 @@ const rollbar = new Rollbar({
   accessToken: 'e4fd9bf3d74445b686dab0f0c761a984',
   captureUncaught: true,
   captureUnhandledRejections: true,
-})
+});
 
 
 
@@ -19,7 +19,7 @@ const rollbar = new Rollbar({
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    rollbar.log('Hellors world!')
+    rollbar.log('Homepage hit!')
     res.sendFile(path.join(__dirname, "/public/index.html"))
 });
 
